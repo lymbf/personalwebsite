@@ -1,0 +1,19 @@
+.Articles {
+    display: grid;
+    grid-template:
+        'lt a1 a1 a2' 400px
+        'lt a1 a1 a3' 400px;
+
+    grid-gap: 50px;
+    max-width: var(--main-width)
+    /*color: #191c1c*/
+}
+
+.left-tags{
+    grid-area: lt;
+    background-color: #282828;
+    min-width: 200px;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(33,33,33,1) 0%, rgba(0,0,0,1) 97%);
+
+}
