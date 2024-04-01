@@ -1,5 +1,4 @@
 import Article from "../../Interfaces/article";
-
 const SET_ARTICLES = 'articles/setArticles'
 
 type articleAction =

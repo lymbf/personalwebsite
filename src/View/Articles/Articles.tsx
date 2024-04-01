@@ -4,6 +4,7 @@ import Article from "./Article/Article";
 import useArticles from "./Controller/articles";
 import {useSelector} from "react-redux";
 import {RootState} from "../../index";
+import Tags from "../Tags/tags";
 
 export default function Articles() {
     useArticles();
@@ -11,7 +12,7 @@ export default function Articles() {
 
     return (
         <div className='Articles'>
-            <div className = 'left-tags'></div>
+            <Tags/>
             {articles && articles.map(art=>{
                 return <Article
                     image_link = {art.image_link}

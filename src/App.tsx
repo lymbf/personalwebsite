@@ -9,6 +9,7 @@ import Articles from "./View/Articles/Articles";
 import Main from "./View/Main/Main";
 import About from "./View/About/About";
 import Contact from "./View/Contact/Contact";
+import Article from "./View/Article/Article";
 function App() {
 
     useInit();
@@ -22,6 +23,7 @@ function App() {
                 <Route path = '/about' element = {<About/>}/>
                 <Route path = '/contact' element = {<Contact/>}/>
                 <Route path = '/' element = {<Main/>}/>
+                <Route path = '/article/:id' element = {<Article/>}/>
             </Routes>
             <Footer/>
         </Router>
