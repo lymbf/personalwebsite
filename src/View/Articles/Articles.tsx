@@ -26,6 +26,8 @@ export default function Articles() {
                 />
             })}
             {articles.slice(0,3).length === 1 && <div className = 'empty'/>}
+            {articles.slice(0,3).length === 0 && <div className = 'empty-1'>No Articules found with selected filters</div>}
+            {articles.slice(0,3).length === 0 && <div className = 'empty'/>}
         </div>
     )
 }
