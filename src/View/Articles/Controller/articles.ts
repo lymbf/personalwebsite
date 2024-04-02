@@ -23,6 +23,7 @@ export default function useArticles() {
                 return {id, title, body, createdAt, likes, tags, image_link, index: i}
             })))}).catch(err => console.log('error: ', err))
     }
+
     useEffect(() => {
         getArticles('blog-articles?populate=*&sort[0]=createdAt:desc')
 
@@ -31,11 +32,9 @@ export default function useArticles() {
 
     useEffect(() => {
         let filters = '';
-
         tags.data.forEach((t,i)=>{
             filters += t.selected ? `&filters[$and][${i}][blog_tags][id][$eq]=${t.id}` : ''
         })
-
         console.log('filters: ', filters)
         getArticles(`blog-articles?populate=*&sort[0]=createdAt:desc${filters}`)
     }, [tags]);

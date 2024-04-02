@@ -12,4 +12,5 @@ export default function useTags() {
             return {name: t.attributes.name, id: t.id, selected: false}
         })))).catch(err=>console.log('err: ', err))
     }, []);
+
 }

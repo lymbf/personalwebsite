@@ -1,6 +1,7 @@
 import Tag from "../../Interfaces/tag";
 const SET_TAGS = 'tags/setTags';
 const SET_SELECTED = 'tags/setSelected';
+const CLEAR_SELECTED = 'tags/clearSelected';
 
 type tagsAction = {
     type: string, data?: Tag[], id?: number
@@ -18,6 +19,12 @@ export default function tags(state = initState, action:tagsAction){
                 if(t.id === action.id)temp.data[i].selected = !temp.data[i].selected
             })
             return {...temp}
+        case CLEAR_SELECTED:
+            let res= {...temp, data: temp.data.map(t=>{
+                    return {...t, selected: false}
+                })}
+           console.log(res);
+            return res
         default: return state
     }
 }
@@ -36,4 +43,10 @@ const setSelected = (payload:number)=>{
     }
 }
 
-export {setTags, setSelected}
+const clearSelected = ()=>{
+    return{
+        type: CLEAR_SELECTED
+    }
+}
+
+export {setTags, setSelected, clearSelected}

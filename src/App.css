@@ -48,3 +48,16 @@ p{
   font-size: 1.2rem;
   color: var(--p-color);
 }
+
+.btn-1{
+  background-color: black;
+  border-radius: 15px;
+  max-width: 170px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 30px auto;
+}
