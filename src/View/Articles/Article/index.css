@@ -12,7 +12,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-
+    max-width:750px;
 }
 
 .Article img{
@@ -83,4 +83,8 @@
 .post{
     position: relative;
     overflow: hidden;
+}
+
+.empty{
+    min-width: 350px;
 }

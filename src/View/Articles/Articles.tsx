@@ -25,6 +25,7 @@ export default function Articles() {
                     id = {art.id}
                 />
             })}
+            {articles.slice(0,3).length === 1 && <div className = 'empty'/>}
         </div>
     )
 }
