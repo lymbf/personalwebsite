@@ -13,7 +13,7 @@ export default function Articles() {
     return (
         <div className='Articles'>
             <Tags/>
-            {articles && articles.map(art=>{
+            {articles && articles.slice(0,3).map(art=>{
                 return <Article
                     image_link = {art.image_link}
                     body = {art.body}

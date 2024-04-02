@@ -9,7 +9,7 @@ export default function useTags() {
     const dispatch = useDispatch();
     useEffect(() => {
         getData('Blog-tags').then(res => dispatch(setTags(res.data.map((t:RawTag) => {
-            return {name: t.attributes.name, id: t.id}
+            return {name: t.attributes.name, id: t.id, selected: false}
         })))).catch(err=>console.log('err: ', err))
     }, []);
 }
