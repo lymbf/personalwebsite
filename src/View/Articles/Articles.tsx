@@ -13,7 +13,7 @@ export default function Articles() {
     return (
         <div className='Articles'>
             <Tags/>
-            {articles && articles.slice(0,3).map(art=>{
+            {articles.data && articles.data.slice(0,3).map(art=>{
                 return <Article
                     image_link = {art.image_link}
                     body = {art.body}
@@ -25,9 +25,9 @@ export default function Articles() {
                     id = {art.id}
                 />
             })}
-            {articles.slice(0,3).length === 1 && <div className = 'empty'/>}
-            {articles.slice(0,3).length === 0 && <div className = 'empty-1'>No Articules found with selected filters</div>}
-            {articles.slice(0,3).length === 0 && <div className = 'empty'/>}
+            {articles.data.slice(0,3).length === 1 && <div className = 'empty'/>}
+            {articles.data.slice(0,3).length === 0 && <div className = 'empty-1'>No Articules found with selected filters</div>}
+            {articles.data.slice(0,3).length === 0 && <div className = 'empty'/>}
         </div>
     )
 }

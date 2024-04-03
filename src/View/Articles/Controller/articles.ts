@@ -5,6 +5,7 @@ import RawArticle from "../../../Application/Interfaces/Response/rawArticule";
 import {useEffect} from "react";
 import RawTag from "../../../Application/Interfaces/Response/rawTag";
 import {RootState} from "../../../index";
+import articleParser from "../../../Application/Parsers/articleParser";
 
 export default function useArticles() {
     const getData = useFetch();
@@ -14,20 +15,12 @@ export default function useArticles() {
         getData(url).then(res => {
             console.log('res: ', res);
             dispatch(setArticles(res.data.map((el: RawArticle, i: number) => {
-                let {id, attributes} = el;
-                let {title, body, createdAt, likes} = attributes;
-                let tags = el.attributes.blog_tags ? el.attributes.blog_tags.data.map((t: RawTag) => {
-                    return {id: t.id, name: t.attributes.name}
-                }) : null
-                let image_link = `${process.env.REACT_APP_BASE_URL}${el.attributes.image.data.attributes.url}`;
-                return {id, title, body, createdAt, likes, tags, image_link, index: i}
+                return articleParser(el, i)
             })))}).catch(err => console.log('error: ', err))
     }
 
     useEffect(() => {
         getArticles('blog-articles?populate=*&sort[0]=createdAt:desc')
-
-
     }, [])
 
     useEffect(() => {

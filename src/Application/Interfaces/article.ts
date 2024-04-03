@@ -7,7 +7,7 @@ export default interface Article{
     title: string | null,
     createdAt: string,
     likes?: number | null,
-    tags?: Tag[],
+    tags?: Tag[]|null,
     id: number,
     index:number
 }
