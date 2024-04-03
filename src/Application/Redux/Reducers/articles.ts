@@ -3,6 +3,7 @@ import RawArticle from "../../Interfaces/Response/rawArticule";
 
 const SET_ARTICLES = 'articles/setArticles'
 const SET_CURRENT_ARTICLE = 'articles/setCurrentArticle';
+const CLEAR_CURRENT_ARTICLE = 'articles/clearCurrentArticle';
 
 type articleAction =
     { type: string, data?: Article[], current?:Article }
@@ -21,6 +22,8 @@ export default function articles(state = initState, action: articleAction) {
         case SET_CURRENT_ARTICLE:
             if(action.current) return {...state, current: action.current}
             else return state
+        case CLEAR_CURRENT_ARTICLE:
+            return {...state, current: null}
         default:
             return state
     }
@@ -37,4 +40,9 @@ const setCurrentArticle = (payload:Article)=>{
     }
 }
 
-export {setArticles, setCurrentArticle}
+const clearCurrentArticle = ()=>{
+    return{
+        type: CLEAR_CURRENT_ARTICLE
+    }
+}
+export {setArticles, setCurrentArticle, clearCurrentArticle}
