@@ -18,7 +18,7 @@
 .Article img{
     width: 100%;
     border-radius: 15px;
-
+    max-height:666px;
 }
 
 .tags{
@@ -30,7 +30,6 @@
 .tag{
     background-color: #494949;
     background: linear-gradient(90deg, rgba(41,41,41,1) 0%, rgba(15,15,15,1) 49%, rgba(42,41,41,1) 100%);
-
     padding: 4px 10px;
     text-transform: uppercase;
     font-size: 1rem;
@@ -40,13 +39,53 @@
     border-radius: 15px;
 }
 
-.a1 h2{
-    font-size: 2rem;
-    line-height: 2.5rem;
-    margin-top: 15px;
+.tag-recent{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.tag-newest{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+h2{
+  text-align: left;
+}
+
+.recent-articles h2{
+    line-height: 1.7rem;
+}
+
+.newest-article h2{
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-top: -1rem;
+    margin-bottom: 20px;
     text-align: left;
     font-weight: 900;
     letter-spacing: 0.6px;
+
+}
+
+.Article .img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*width: 100%;*/
+    overflow: hidden;
+    min-height: 233px;
+    max-height: 500px;
+    height: 500px;
+    border-radius: 15px;
+}
+.newest-article img{
+
+
 }
 
 .r-more{
@@ -78,6 +117,7 @@
     color: var(--font-secondary);
     margin-top: 10px;
     text-align: right;
+    font-size: 0.85rem;
 }
 
 .post{

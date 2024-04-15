@@ -9,5 +9,5 @@ export default interface Article{
     likes?: number | null,
     tags?: Tag[]|null,
     id: number,
-    index:number
+    newest?:boolean
 }

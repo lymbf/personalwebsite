@@ -1,11 +1,34 @@
 .Articles {
-    display: grid;
-    grid-template:
-        'lt a1 a1 a2' 400px
-        'lt a1 a1 a3' 400px;
-
-    grid-gap: 50px;
-    max-width: var(--main-width)
-    /*color: #191c1c*/
+    display: flex;
+    flex-direction: row;
+    width: var(--main-width);
+    justify-content: space-between;
 }
 
+.recent-articles{
+    max-width: 350px;
+    margin-left: 50px;
+    height: 1050px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recent-articles > .Article{
+    max-height: 500px;
+}
+
+
+
+
+.newest-article{
+    height: 1050px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.newest-article > .Article{
+    max-height: 1050px;
+    width: 100%;
+    max-width: 1200px;
+}

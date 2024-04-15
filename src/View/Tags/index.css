@@ -1,10 +1,9 @@
 .left-tags{
-    grid-area: lt;
-    background-color: #282828;
-    min-width: 200px;
+    max-width: 300px;
     border-radius: 15px;
-    background: linear-gradient(180deg, rgba(33,33,33,1) 0%, rgba(0,0,0,1) 97%);
-
+    background: #282828 linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(0, 0, 0, 1) 97%);
+    flex: 1;
+    margin-right: 50px;
 }
 
 .left-tags h3{

@@ -9,5 +9,5 @@ export default function articleParser(raw:RawArticle, i?:number):Article{
         return {id: t.id, name: t.attributes.name, selected:false}
     }) : null
     let image_link = `${process.env.REACT_APP_BASE_URL}${raw.attributes.image.data.attributes.url}`;
-    return {id, title, body,  createdAt, likes, tags, image_link, index: (i || i === 0) ? i : id}
+    return {id, title, body,  createdAt: new Date(createdAt).toLocaleString(), likes, tags, image_link}
 }
