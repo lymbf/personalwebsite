@@ -63,7 +63,7 @@ h2{
 .newest-article h2{
     font-size: 4rem;
     line-height: 5rem;
-    margin-top: -1rem;
+    margin-top: 0rem;
     margin-bottom: 20px;
     text-align: left;
     font-weight: 900;

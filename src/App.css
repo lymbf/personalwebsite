@@ -12,7 +12,7 @@
   min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
-
+  font-family: 'loos-normal'
 }
 
 .App{
@@ -48,6 +48,7 @@ h1{
 p{
   text-align: left;
   font-size: 1.2rem;
+  line-height: 1.5rem;
   color: var(--p-color);
 }
 

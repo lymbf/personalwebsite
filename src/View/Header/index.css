@@ -2,28 +2,46 @@
 .Header{
     max-width: var(--main-width);
     width:100%;
-    height: 120px;
+    height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 160px;
+    padding-top: 20px;
+
+}
+
+.Header svg{
+    max-height: 200px;
+    height: 100%;
+    color: white;
+    fill: white;
+    /*margin: 10px 60px 10px 60px;*/
 }
 
 .Header ul{
     display: flex;
+    height: 100%;
+    width: 100%;
+
+    align-items: center;
+    justify-content: flex-end;
 }
 
+
 .Header li{
-    margin: 10px 0 10px 60px;
+    margin: 10px 0px 10px 120px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
 }
 
-.logo {
-    font-size: 3rem;
-    text-transform: capitalize;
-    font-weight: 500;
-    letter-spacing: 2px;
-}
+/*.logo {*/
+/*    font-size: 3rem;*/
+/*    text-transform: capitalize;*/
+/*    font-weight: 500;*/
+/*    letter-spacing: 2px;*/
+/*}*/
